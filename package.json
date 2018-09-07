@@ -1,44 +1,15 @@
 {
   "name": "github-webhook-event-types",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "",
-  "author": "Orta Therox",
+  "authors": [
+    "Orta Therox",
+    "James O'Sullivan"
+  ],
   "license": "MIT",
   "types": "source/index.d.ts",
   "devDependencies": {
-    "@types/jest": "^19.2.3",
-    "@types/underscore": "^1.8.8",
-    "danger": "^0.18.0",
-    "html-to-text": "^4.0.0",
-    "husky": "^0.13.3",
-    "jest": "^20.0.0",
-    "json2ts": "^0.0.7",
-    "lint-staged": "^3.2.5",
-    "simple-headless-chrome": "^4.3.10",
-    "ts-jest": "^20.0.0",
-    "ts-node": "^6.0.0",
-    "tslint": "^5.9.1",
-    "typescript": "^2.8.1",
-    "xml2js": "^0.4.19"
   },
   "scripts": {
-    "lint": "tslint 'source/**/*.{ts,tsx}'",
-    "prepush": "tsc"
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "(.test)\\.(ts|tsx)$",
-    "testPathIgnorePatterns": [
-      "\\.snap$",
-      "<rootDir>/node_modules/"
-    ],
-    "cacheDirectory": ".jest/cache"
   }
 }
