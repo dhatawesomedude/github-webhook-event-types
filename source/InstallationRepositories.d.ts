@@ -1,5 +1,12 @@
 import {Action, Installation, User} from './common';
 
+export interface basicInstallationRepository {
+  id: number
+  name: string
+  full_name: string
+  private: boolean
+}
+
 export interface InstallationRepositoriesAccount extends User {
 }
 
@@ -8,10 +15,8 @@ export interface InstallationRepositoriesInstallation extends Installation {
   html_url: string;
 }
 
-export interface InstallationRepositoriesRepositories_removed {
-  id: number;
-  name: string;
-  full_name: string;
+export interface InstallationRepositoriesRepositories_removed extends basicInstallationRepository {
+
 }
 
 export interface InstallationRepositoriesSender extends User {

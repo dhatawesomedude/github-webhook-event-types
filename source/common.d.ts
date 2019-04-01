@@ -31,11 +31,12 @@ export interface Deployment {
     statuses_url: string;
     repository_url: string;
 }
+export type installationRepositorySelection = 'all' | 'selected'
 
 export interface Installation {
     id: number;
     account: User;
-    repository_selection: string;
+    repository_selection: installationRepositorySelection;
     access_tokens_url: string;
     repositories_url: string;
 }

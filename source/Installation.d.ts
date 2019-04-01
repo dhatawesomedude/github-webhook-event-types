@@ -1,4 +1,7 @@
 import {Installation, User} from './common';
+import { basicInstallationRepository } from './InstallationRepositories'
+
+type installationAction = 'created' | 'deleted' | 'new_permissions_accepted'
 
 export interface InstallationAccount extends User {
 }
@@ -11,7 +14,8 @@ export interface InstallationSender extends User {
 }
 
 export interface Installation {
-  action: string;
+  action: installationAction;
   installation: InstallationInstallation;
   sender: InstallationSender;
+  repositories: basicInstallationRepository [];
 }
